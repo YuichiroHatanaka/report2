@@ -6,6 +6,7 @@ int main(){
     int c;
  
     if(!(lf=fopen("1.c","r")) || (!(sf=fopen("test.c","w")))){
+     //1.c test.cはファイル名
         printf(" ファイルオープンエラー\n");
         return -1;
     }
