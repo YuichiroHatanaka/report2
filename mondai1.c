@@ -22,10 +22,7 @@ int main(){
       fputc(' ',sf);
     }
     }
- 
-    //書込みクローズ
     fclose(sf);
-    //読み込みクローズ
     fclose(lf);
  
     return 0;
