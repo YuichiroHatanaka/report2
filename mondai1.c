@@ -12,7 +12,7 @@ int main(){
     //if(lf=fopen("1.c","r")==NULL){}
     //if(sf=fopen("test.c","w")==NULL){}
     //の場合と同じです。
-    if(!(lf=fopen("1.c","r")) || (!(sf=fopen("test.c","w")))){
+    if((!(lf=fopen("1.c","r"))) || (!(sf=fopen("test.txt","w")))){
         printf(" ファイルオープンエラー\n");
         return -1;
     }
@@ -21,8 +21,10 @@ int main(){
     //ファイルから一文字読み込みcへ格納
     while((c=fgetc(lf))!=EOF){
         //ファイルに出力
-	
     if(isalpha(c)){
+      if('a' <= c && c <= 'z'){
+	      c = c - 32;
+      }
       fputc(c,sf);
     }else if(c == ' '){
       fputc(c,sf);
