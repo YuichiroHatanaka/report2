@@ -23,8 +23,8 @@ int main(){
         //ファイルに出力
     if(isalpha(c)){
       if('a' <= c && c <= 'z'){
-	      c = c - 32;
-      }
+	  c = toupper(c);
+	}
       fputc(c,sf);
     }else if(c == ' '){
       fputc(c,sf);
@@ -42,4 +42,3 @@ int main(){
  
     return 0;
 }
-
