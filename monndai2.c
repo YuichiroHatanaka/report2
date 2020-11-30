@@ -6,6 +6,7 @@ int x;
 int i;
 int c;
 int count[26];
+int rank[26];
 FILE *lf;
 
 int main(void){
@@ -20,4 +21,5 @@ int main(void){
   for(i = 0;i < 26;i++){
     printf("%c はテキスト内に %d 個ある。\n", 65+i, count[i]);
   }
+  fclose(lf);
 }
