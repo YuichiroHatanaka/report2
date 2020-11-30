@@ -4,7 +4,9 @@
 char a;
 int x, i;
 int c;
+int tmp;
 int count[26];
+int rank[26];
 FILE *lf;
 
 int main(void){
@@ -13,6 +15,18 @@ int main(void){
     for(i = 0;i < 26;i++){
       if(c == 65 + i){
         count[i] = count[i] + 1;
+      }
+    }
+  }
+  for(i = 0;i < 26;i++){
+    rank[i] = count[i];
+  }
+  for(j = 0;j < 25;j++){
+    for(k = 0;k < 25-j;k++){
+      if(rank[i] < rank[i+1]){
+        tmp = rank[i];
+        rank[i] = rank[i+1];
+        rank[i+1] = tmp;
       }
     }
   }
