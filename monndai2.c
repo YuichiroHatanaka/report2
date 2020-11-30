@@ -1,12 +1,10 @@
 #include<stdio.h>
 #include <ctype.h>
 
-char a;
 int x;
 int i;
 int c;
 int count[26];
-int rank[26];
 FILE *lf;
 
 int main(void){
