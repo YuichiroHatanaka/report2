@@ -2,7 +2,8 @@
 #include <ctype.h>
 
 char a;
-int x, i;
+int x;
+int i, j, k;
 int c;
 int tmp;
 int count[26];
