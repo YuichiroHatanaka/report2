@@ -32,6 +32,6 @@ int main(void){
     }
   }
   for(i = 0;i < 26;i++){
-    printf("%c はテキスト内に %d 個ある。\n", 65+i, count[i]);
+    printf("%c はテキスト内に %d 個ある。\n", 65+i, rank[i]);
   }
 }
