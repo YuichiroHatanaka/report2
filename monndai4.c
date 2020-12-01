@@ -1,21 +1,19 @@
 #include <stdio.h>
 #include <ctype.h>
 #include <stdlib.h>
+#include <time.h>
 
 int x;
-int i, j;
+int i;
 int c;
 int M;
-int a;
+int randnum;
 int count[26];
-int GetRandom(int min, int max);
+int str[i]
 FILE *lf;
 
-int GetRandom(int min, int max){
-  return min + (int)(rand()*(max-min+1.0)/(1.0+RAND_MAX));
-}
-
 int main(void){
+  srand((unsigned int)time(NULL));
   lf = fopen("test.txt","r");
   if(lf == NULL){
      printf(" ファイルオープンエラー\n");
@@ -35,19 +33,14 @@ int main(void){
     M = M + count[i];
   }
   M = M + count[26];
-  for(i = 0;i < 100;i++){
-    a = GetRandom(1,M);
-    int p = 0;
-    for(j = 0;j < 26;j++){
-      if(p <  a && a <= p + count[j]){
-        printf("%c", 65+j);
-      }
-      p = p + count[j];
-    }
-    if(p <  a && a <= p + count[26]){
-      printf(" ");
-    }
-  }
+  for(i = 0; i < M; i++) {
+	  	fscanf(lf, "%c", &str[i]);		//テキストファイルから一文字ずつ配列に格納
+  	}
+
+  	for(count = 0; count < 100; i++){
+	  	randnum = rand()%maxnum;			//乱数の生成
+	  	fprintf(outfile, "%c", str[randnum]);		//配列の乱数番目の要素を入力
+	  }
   printf("\n");
   fclose(lf);
 }
