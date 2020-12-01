@@ -45,7 +45,7 @@ int main(void){
       p = p + count[j];
     }
     if(p <  a && a <= p + count[26]){
-      printf("%c", 65+j);
+      printf(" ");
     }
   }
   printf("\n");
