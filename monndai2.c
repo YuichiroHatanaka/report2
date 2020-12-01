@@ -9,7 +9,7 @@ FILE *lf, *sf;
 
 int main(void){
   lf = fopen("test.txt","r");
-  sf = fopen("test.c","w")
+  sf = fopen("test2.txt","w");
   while((c=fgetc(lf))!=EOF){
     for(i = 0;i < 26;i++){
       if(c == 65 + i){
