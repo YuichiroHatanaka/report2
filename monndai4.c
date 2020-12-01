@@ -10,15 +10,15 @@ int M;
 int randnum;
 int count[26];
 int str[i]
-FILE *lf;
+FILE *lf *sf;
 
 int main(void){
   srand((unsigned int)time(NULL));
-  lf = fopen("test.txt","r");
-  if(lf == NULL){
-     printf(" ファイルオープンエラー\n");
-     return -1;
+  if((!(lf=fopen("test.txt","r"))) || (!(sf=fopen("test2.txt","w")))){
+    printf(" ファイルオープンエラー\n");
+    return -1;
   }
+  i = 0;
   while((c=fgetc(lf))!=EOF){
     for(i = 0;i < 26;i++){
       if(c == 65 + i){
@@ -36,11 +36,12 @@ int main(void){
   for(i = 0; i < M; i++) {
 	  	fscanf(lf, "%c", &str[i]);		//テキストファイルから一文字ずつ配列に格納
   	}
-
   	for(count = 0; count < 100; i++){
-	  	randnum = rand()%maxnum;			//乱数の生成
-	  	fprintf(outfile, "%c", str[randnum]);		//配列の乱数番目の要素を入力
+	  	randnum = rand()%M;			//乱数の生成
+	  	fprintf(sf, "%c", str[randnum]);		//配列の乱数番目の要素を入力
 	  }
   printf("\n");
   fclose(lf);
+  fclose(sf);
+  return 0;
 }
