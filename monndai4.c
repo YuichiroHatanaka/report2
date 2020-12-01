@@ -26,23 +26,28 @@ int main(void){
       if(c == 65 + i){
         count[i] = count[i] + 1;
        }
-     }
+      if(c == ' '){
+        count[26] = count[26] + 1;
+      }
+    }
   }
   for(i = 0;i < 26;i++){
     M = M + count[i];
   }
-//printf("%d\n",M);
+  M = M + count[26];
   for(i = 0;i < 100;i++){
     a = GetRandom(1,M);
-//printf("ランダム = %d",a);
     int p = 0;
     for(j = 0;j < 26;j++){
       if(p <  a && a <= p + count[j]){
         printf("%c", 65+j);
-        }
-    p = p + count[j];
-     }
-   }
+      }
+      p = p + count[j];
+    }
+    if(p <  a && a <= p + count[26]){
+      printf("%c", 65+j);
+    }
+  }
   printf("\n");
   fclose(lf);
 }
