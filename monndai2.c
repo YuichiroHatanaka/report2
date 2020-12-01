@@ -18,10 +18,13 @@ int main(void){
         count[i] = count[i] + 1;
       }
     }
+    if(c == ' '){
+      count[26] = count[26] + 1;
   }
   for(i = 0;i < 26;i++){
     fprintf(sf, "%c はテキスト内に %d 個ある。\n", 65+i, count[i]);
   }
+  fprintf(sf, "' 'はテキスト内に %d 個ある。\n", count[26]);
   fclose(lf);
   fclose(sf);
 }
