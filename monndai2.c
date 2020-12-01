@@ -5,10 +5,11 @@ int x;
 int i;
 int c;
 int count[26];
-FILE *lf;
+FILE *lf, *sf;
 
 int main(void){
   lf = fopen("test.txt","r");
+  sf = fopen("test.c","w")
   while((c=fgetc(lf))!=EOF){
     for(i = 0;i < 26;i++){
       if(c == 65 + i){
@@ -17,7 +18,8 @@ int main(void){
     }
   }
   for(i = 0;i < 26;i++){
-    printf("%c はテキスト内に %d 個ある。\n", 65+i, count[i]);
+    fprintf(sf, "%c はテキスト内に %d 個ある。\n", 65+i, count[i]);
   }
   fclose(lf);
+  fclose(sf);
 }
