@@ -9,8 +9,8 @@ int c;
 int M;
 int randnum;
 int count[26];
-int str[i]
-FILE *lf *sf;
+int str[i];
+FILE *lf, *sf;
 
 int main(void){
   srand((unsigned int)time(NULL));
@@ -36,7 +36,7 @@ int main(void){
   for(i = 0; i < M; i++) {
 	  	fscanf(lf, "%c", &str[i]);		//テキストファイルから一文字ずつ配列に格納
   	}
-  	for(count = 0; count < 100; i++){
+  	for(i = 0; i < 100; i++){
 	  	randnum = rand()%M;			//乱数の生成
 	  	fprintf(sf, "%c", str[randnum]);		//配列の乱数番目の要素を入力
 	  }
