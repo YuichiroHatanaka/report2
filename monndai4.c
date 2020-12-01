@@ -9,7 +9,7 @@ int c;
 int M;
 int randnum;
 int count[26];
-int str[i];
+char str[i];
 FILE *lf, *sf;
 
 int main(void){
