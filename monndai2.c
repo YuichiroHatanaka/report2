@@ -8,8 +8,10 @@ int count[26];
 FILE *lf, *sf;
 
 int main(void){
-  lf = fopen("test.txt","r");
-  sf = fopen("test2.txt","w");
+  if((!(lf=fopen("1.c","r"))) || (!(sf=fopen("test.txt","w")))){
+        printf(" ファイルオープンエラー\n");
+        return -1;
+    }
   while((c=fgetc(lf))!=EOF){
     for(i = 0;i < 26;i++){
       if(c == 65 + i){
