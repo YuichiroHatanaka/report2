@@ -8,7 +8,7 @@ int count[26];
 FILE *lf, *sf;
 
 int main(void){
-  if((!(lf=fopen("1.c","r"))) || (!(sf=fopen("test.txt","w")))){
+  if((!(lf=fopen("test.txt","r"))) || (!(sf=fopen("test2.txt","w")))){
         printf(" ファイルオープンエラー\n");
         return -1;
     }
